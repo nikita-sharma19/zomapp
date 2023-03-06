@@ -1,0 +1,57 @@
+
+body{
+    margin:0px;
+}
+
+header{
+    height:60px;
+    background-color: #3b2632;
+}
+
+#brand{
+    float: left;
+    color:white;
+    font-size: 30px;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+#social{
+    float: right;
+}
+.socialLogo{
+    height: 50px;
+}
+
+#search{
+    height: 450px;
+    background-image: url('images/foodwallpaper.jpg');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 100% 450px;
+}
+.logo{
+    height:150px;
+    width:150px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 45%;
+    margin-top: 2%;
+    font-size: 90px;
+    position: absolute;
+}
+.logo span{
+    margin-left: 20%;
+    margin-top: 25%;
+    
+}
+#quicksearch{
+    height:600px;
+    background-color: #d9b6ca;
+}
+footer{
+    height: 120px;
+    background-color: #3b2632;
+    color: white;
+    text-align: center;
+   
+}
