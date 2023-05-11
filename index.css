@@ -1,22 +1,53 @@
 
 body{
     margin:0px;
+    /* background-color: #BB2C27; */
 }
 
 header{
     height:60px;
-    background-color: #3b2632;
+    background-color: #BB2C27;
+    /* background-color: #FA3A34; */
+}
+#temp{
+    margin-left: 15%;
+    color:white;
+    font-size: 18px;
+    position: absolute;
+}
+#checkWeather{
+    background-color:white;
+    color:black;
+    font-size: 15px;
+    width:25%;
+    height:200px;
+    margin-left: 70%;
+    margin-top: 2%;
+    border:1px solid white;
+    position: absolute;
+    /* z-index: 20; */
 }
 
 #brand{
     float: left;
     color:white;
     font-size: 30px;
+    font-weight: bold;
     margin-left: 3%;
     margin-top: 1%;
 }
-#social{
+.login{
     float: right;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+.login > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5%;
 }
 .socialLogo{
     height: 50px;
@@ -70,9 +101,9 @@ select{
     width:59%;
 }
 #quicksearch{
-    height:600px;
     width:80%;
-    background-color: #d9b6ca;
+    /* background-color: #d9b6ca; */
+    /* background-color: #BB2C27; */
     margin-left:10%;
     margin-top:2%;
     display: inline-block;
@@ -91,12 +122,54 @@ select{
     margin-left:2%;
 }
 .cardContainer{
-    height:180px;
-    width:30%;
+    /* height:180px;
+    width:90%;
     margin-left: 2%;
     margin-top: 3%;
-    float: left;
+    float: left; */
+    /* border: 2px solid black; */
+    margin-bottom: 85px;
+    display: flex;
+    justify-content: space-between;
 }
+.card img{
+    border-radius: 5px;
+    height:200px;
+}
+.cardContent{
+    margin-top: 14px;
+    width: 80%;
+    /* border: 2px solid black; */
+}
+.detailsDiv{
+    text-align: center;
+    display: flex;
+    margin-top: 18px;
+    font-size: 12px;
+    justify-content: space-between;
+    color: #535665;
+}
+.detailsDiv div{
+    float: left;
+    /* margin-left: 1%; */
+    color:#BB2C27;
+    /* border:2px solid black; */
+
+}
+
+
+.heading{
+    font-size: 15px;
+    font-weight: 500;
+    color:black;
+}
+.subHeading{
+    color: #686b78;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
 .cardContent1{
     width: 52%;
     float: left;
@@ -107,7 +180,7 @@ select{
 }
 .cardContent2{
     width:45%;
-    float:left;
+    /* float:left; */
     margin-left: 3%;
     margin-top: 15%;
 }
@@ -128,9 +201,11 @@ a{
     }
 footer{
     height: 200px;
-    background-color: #3b2632;
+    /* background-color: #3b2632; */
+    background-color: #BB2C27 ;
     color: white;
     text-align: center;
+    margin-top: 2%;
    
 }
 .footText{

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zomapp</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link href="" rel="icon"> -->
 </head>
 <body>
@@ -13,17 +15,14 @@
         <div id="brand">
             Zomapp
         </div>
-        <!-- <div id="social">
-            <a href="">
-                <img src="images/fblogo.png" alt="fblogo" class="socialLogo">
-            </a>
-            <a href="">
-                <img src="images/insta.png" alt="fblogo" class="socialLogo">
-            </a>
-            <a href="">
-                <img src="images/youtube.png" alt="fblogo" class="socialLogo">
-            </a>
-        </div> -->
+        <p id="temp"></p>
+       <div class="login">
+        <a href="signup.html" target="_blank">Sign Up</a>
+        <a href="login.html" target="_blank">Login</a>
+        <a href="listing/listing.html" target="_blank">Filter</a>
+        <a href="#" class="check_weather" onClick="geolocation()"><i class="fa-solid fa-cloud-sun" style="font-size:36px"></i></a>
+        <!-- <button class="weather-btn"onClick='geolocation()'>Get Location</button> -->
+       </div>
     </header>
     <div id="search">
         <div class="logo">
@@ -31,6 +30,14 @@
         </div>
         <div id="heading">
             Find Best Places Near You
+        </div>
+        <div id="checkWeather">
+            <button class="closeWeather_btn" onclick="closeWeather()">&times;</button>
+            <p id="city" ></p>
+            <p id="coordinates"></p>
+            <p id="temperature"></p>
+            <p id="weather"></p>
+            <p id="feels"></p>
         </div>
         <div class="dropdown">
             <select>
@@ -46,6 +53,369 @@
         <span class="quickSubheading"> Find Restaurants By Meal-Type</span>
         <div class="mainbox">
             <div class="cardContainer">
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img class="image" alt="Khatu Shyam Ji Ke Makkhan Wale Parathey" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/46b6c65ad408969240321e990e5fb172">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Khatu Shyam Ji Ke Makkhan Wale Parathey</div>
+                                <div class="subHeading" title="North Indian, Thalis, Snacks">North Indian, Thalis, Snacks</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 FOR TWO</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                 <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/7/847/dc594ce9b8f9d9f09bb3ecbc5bcb65d1_o2_featured_v2.jpg?output-format=webp" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Steamed Momos</div>
+                                <div class="subHeading" title="Momos">Momos</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 </div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/0/20219330/539f4c8ad6665cc18296093ae0b79f36_o2_featured_v2.jpg?output-format=webp" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading"> Rice & Rolls</div>
+                                <div class="subHeading" title="Snacks"> Snacks</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 </div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+            </div>
+
+            <div class="cardContainer">
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/9/300749/90c3a2c21e20d88dffdd4accaa6280b9_o2_featured_v2.jpg?output-format=webp" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Chocolate shake</div>
+                                <div class="subHeading" title="Shakes">Shakes</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹100</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/8/310078/a60387cca3992269b628f69c17745d19_o2_featured_v2.jpg?output-format=webp" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Burger</div>
+                                <div class="subHeading" title=" Snacks">Snacks</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹150</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/5/55/ff4890810d3cdf9edbe86b823ea1fe8f_o2_featured_v2.jpg?output-format=webp" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading"> Momos</div>
+                                <div class="subHeading" title="North Indian">North Indian</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 FOR ONE</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+            </div>
+
+            <div class="cardContainer">
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/1/491/aa50c08ea5ade50a6d1c2d7aca242a1c_o2_featured_v2.jpg?output-format=webp" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Chole Bhature</div>
+                                <div class="subHeading" title="North Indian, Thalis">North Indian, Thalis</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 FOR TWO</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/3/18742153/b4f773422ecf7c432d6b5b467551a313_o2_featured_v2.jpg" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Dosa</div>
+                                <div class="subHeading" title="South Indian">South Indian</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 FOR TWO</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/0/550/9361ee4d0e18519da526b87f81f067ae_o2_featured_v2.jpg" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">South Indian</div>
+                                <div class="subHeading" title="South Indian, Thalis, Snacks">South Indian, Thali</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹300 FOR TWO</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+            </div>
+
+            <div class="cardContainer">
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/4/309844/c88d2fde8c61549fb83cfdf2049e9760_o2_featured_v2.jpg" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Ice Cream</div>
+                                <div class="subHeading" title="Ice Cream">Ice Cream</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200</div>
+                            </div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/0/18416840/297e6c82fbf1b14832189765dd0bdcc5_o2_featured_v2.jpg" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Cupcakes</div>
+                                <div class="subHeading" title="Cupcake">Cupcakes</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200 FOR TWO</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+
+                <a href="/restaurants/khatu-shyam-ji-ke-makkhan-wale-parathey-saket-b-185-saket-meerut-679096" class="imageLink">
+                    <div class="card">                      
+                            <div class="imageDiv">
+                                <img alt="Restaurant Card" width="254" height="160" src="https://b.zmtcdn.com/data/pictures/chains/1/301011/f65fca415060fc42ef14f053c8299f14_o2_featured_v2.jpg" loading="lazy" class="sc-s1isp7-5 fyZwWD">
+                            </div>
+                            <!-- <div class="IJsqo">
+                                <div class="_1kXWW">Promoted</div>
+                            </div> -->
+                            <div class="cardContent">
+                                <div class="heading">Starbucks Coffee</div>
+                                <div class="subHeading" title="coffee">Coffee</div>
+                            </div>
+                            <div class="detailsDiv">
+                                <div class="details ">
+                                    <!-- <span class="icon-star _537e4"></span> -->
+                                    <span>--</span>
+                                </div>
+                                <div>•</div>
+                                <div>52 MINS</div>
+                                <div>•</div>
+                                <div class="cost">₹200</div>
+                            </div>
+                       
+                        <!-- <div class="QuickView-div">
+                            <span role="button" aria-label="Open" class="QuickView-btn">Quick View</span>
+                        </div> -->
+                    </div>
+                </a>
+            </div>
+
+
+
+
+
+
+
+            <!-- <div class="cardContainer">
                 <div class="cardContent1">
                     <img src="images/drinks.jpg"/>
                 </div>
@@ -70,8 +440,8 @@
                         Best Deal For BreakFast
                     </div>
                 </div>
-            </div>
-            <div class="cardContainer">
+            </div> -->
+            <!-- <div class="cardContainer">
                 <div class="cardContent1">
                     <img src="images/burger.jpg"/>
                 </div>
@@ -83,8 +453,8 @@
                         Best Deal For BreakFast
                     </div>
                 </div>
-            </div>
-            <div class="cardContainer">
+            </div> -->
+            <!-- <div class="cardContainer">
                 <div class="cardContent1">
                     <img src="images/noodles.jpg"/>
                 </div>
@@ -96,8 +466,8 @@
                         Best Deal For BreakFast
                     </div>
                 </div>
-            </div>
-            <div class="cardContainer">
+            </div> -->
+            <!-- <div class="cardContainer">
                 <div class="cardContent1">
                     <img src="images/pasta.jpg"/>
                 </div>
@@ -109,8 +479,8 @@
                         Best Deal For BreakFast
                     </div>
                 </div>
-            </div>
-            <div class="cardContainer">
+            </div> -->
+            <!-- <div class="cardContainer">
                 <div class="cardContent1">
                     <img src="images/pizza.jpg"/>
                 </div>
@@ -122,7 +492,34 @@
                         Best Deal For BreakFast
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <!-- <div class="cardContainer">
+                <div class="cardContent1">
+                    <img src="images/pizza.jpg"/>
+                </div>
+                <div class="cardContent2">
+                    <div class="contHeading">
+                        <a href="../listing/listing.html">Pizza</a>
+                    </div>
+                    <div class="contSubHeading">
+                        Best Deal For BreakFast
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="cardContainer">
+                <div class="cardContent1">
+                    <img src="images/pizza.jpg"/>
+                </div>
+                <div class="cardContent2">
+                    <div class="contHeading">
+                        <a href="../listing/listing.html">Pizza</a>
+                    </div>
+                    <div class="contSubHeading">
+                        Best Deal For BreakFast
+                    </div>
+                </div>
+            </div> -->
+
         </div>
     </div>
     <footer>
@@ -132,22 +529,19 @@
     <div class="footDiv">
         <ul>
             <li>About Us</li>
-            <li>Contact Us</li>
         </ul>
     </div>
-    <div class="footDiv">
+    <!-- <div class="footDiv">
         <ul>
-            <li>About Us</li>
             <li>Contact Us</li>
         </ul>
-    </div>
+    </div> -->
     <div class="footDiv noBorder">
         <ul>
-            <li>About Us</li>
             <li>Contact Us</li>
         </ul>
     </div>
-    <a href="">
+    <!-- <a href="">
         <img src="images/fblogo.png" alt="fblogo" class="socialLogo"/>
     </a>
     <a href="">
@@ -155,7 +549,61 @@
     </a>
     <a href="">
         <img src="images/youtube.png" alt="fblogo" class="socialLogo"/>
-    </a>
+    </a> -->
     </footer>
 </body>
+
+<script>
+    function closeWeather(){
+    document.getElementById('checkWeather').style.visibility='hidden';
+}
+    let t = document.getElementById("temp");
+    let city = document.getElementById('city');
+    let x = document.getElementById('coordinates');
+    let y = document.getElementById('temperature');
+    let z = document.getElementById('feels');
+    let w = document.getElementById('weather');
+    
+
+    function geolocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else{
+            x.innerText = 'Location not supported';
+        }
+    }
+    function showPosition(data){
+        console.log(data);
+        let lat = data.coords.latitude;
+        let lon = data.coords.longitude;
+        x.innerText = `Latitude is ${lat} and Longitude is ${lon}`
+        const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+        fetch(url,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
+
+            
+
+            let cityName = data.city.name + ','+ ' '+ data.city.country;
+            city.innerText=`${cityName}`;
+
+            let temp = data.list[0].temp.day+"°C";
+            t.innerText = `${cityName} , Temperature: ${temp}`;
+
+            let feelsLike = data.list[0].feels_like.day+"°C";
+            z.innerText = `Feels Like: ${feelsLike}`;
+            
+            let weather = data.list[0].weather[0].main;
+            let weather_description = data.list[0].weather[0].description;
+            w.innerText = `Weather is: ${weather}\n Description: ${weather_description}`;             
+        })
+    }
+        
+        
+
+    
+</script>
+
 </html>
